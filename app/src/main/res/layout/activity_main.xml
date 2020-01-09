@@ -125,7 +125,7 @@
                                                 android:paddingTop="10dp"
                                                 android:layout_width="match_parent"
                                                 android:layout_height="match_parent"
-                                                android:src="@drawable/sunanampel"
+                                                android:src="@drawable/iconwali"
                                                 android:layout_gravity="center"
                                                 android:layout_weight="1"
                                                 />
@@ -172,7 +172,7 @@
                                                 android:paddingTop="10dp"
                                                 android:layout_width="match_parent"
                                                 android:layout_height="match_parent"
-                                                android:src="@drawable/sunanampel"
+                                                android:src="@drawable/iconmakam"
                                                 android:layout_gravity="center"
                                                 android:layout_weight="1" />
                                             <TextView
@@ -225,7 +225,7 @@
                                                 android:paddingTop="10dp"
                                                 android:layout_width="match_parent"
                                                 android:layout_height="match_parent"
-                                                android:src="@drawable/sunanampel"
+                                                android:src="@drawable/iconpeninggalan"
                                                 android:layout_gravity="center"
                                                 android:layout_weight="1" />
                                             <TextView
@@ -270,7 +270,7 @@
                                                 android:paddingTop="10dp"
                                                 android:layout_width="match_parent"
                                                 android:layout_height="match_parent"
-                                                android:src="@drawable/sunanampel"
+                                                android:src="@drawable/icontentang"
                                                 android:id="@+id/imgSustainableFinancing"
                                                 android:layout_gravity="center"
                                                 android:layout_weight="1" />
