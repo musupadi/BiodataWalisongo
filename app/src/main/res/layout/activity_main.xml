@@ -72,7 +72,10 @@
                         android:layout_height="240dp"
                         android:orientation="vertical"
                         android:gravity="center">
-
+                        <ImageView
+                            android:layout_width="90dp"
+                            android:layout_height="90dp"
+                            android:src="@drawable/walisongo"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -112,7 +115,7 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
                                     android:orientation="vertical"
-                                    android:id="@+id/linearInformasiKehamilan">
+                                    android:id="@+id/linearBiodataWalisongo">
                                     <RelativeLayout
                                         android:layout_width="match_parent"
                                         android:layout_height="match_parent"
@@ -158,7 +161,7 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
                                     android:orientation="vertical"
-                                    android:id="@+id/linearMitosKehamilan">
+                                    android:id="@+id/linearMakam">
                                     <RelativeLayout
                                         android:layout_width="match_parent"
                                         android:layout_height="match_parent"
@@ -212,7 +215,7 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
                                     android:orientation="vertical"
-                                    android:id="@+id/linearKalkulatorHPL">
+                                    android:id="@+id/linearPeninggalan">
                                     <RelativeLayout
                                         android:layout_width="match_parent"
                                         android:layout_height="match_parent"
@@ -221,13 +224,15 @@
                                             android:layout_width="match_parent"
                                             android:layout_height="match_parent"
                                             android:orientation="vertical">
+
                                             <ImageView
-                                                android:paddingTop="10dp"
                                                 android:layout_width="match_parent"
                                                 android:layout_height="match_parent"
-                                                android:src="@drawable/iconpeninggalan"
                                                 android:layout_gravity="center"
-                                                android:layout_weight="1" />
+                                                android:layout_weight="1"
+                                                android:paddingTop="10dp"
+                                                android:src="@drawable/iconpeninggalan" />
+
                                             <TextView
                                                 android:layout_width="match_parent"
                                                 android:layout_height="match_parent"

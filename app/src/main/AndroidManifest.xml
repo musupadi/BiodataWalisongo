@@ -9,8 +9,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Activity.MainActivity"></activity>
-        <activity android:name=".Activity.SplashActivity">
+        <activity android:name=".Activity.PeninggalanActivity"
+            android:parentActivityName=".Activity.MainActivity"></activity>
+        <activity android:name=".Activity.DetailBiodataActivity"
+            android:parentActivityName=".Activity.BiodataActivity"/>
+        <activity
+            android:name=".Activity.BiodataActivity"
+            android:parentActivityName=".Activity.MainActivity" />
+        <activity
+            android:name=".Activity.MainActivity"
+            android:theme="@style/AppThemeNoAction" />
+        <activity
+            android:name=".Activity.SplashActivity"
+            android:theme="@style/AppThemeNoAction">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
