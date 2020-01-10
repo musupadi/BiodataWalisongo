@@ -9,11 +9,12 @@ import android.os.Bundle;
 import com.destinyapp.biodatawalisongo.Adapter.AdapterHome;
 import com.destinyapp.biodatawalisongo.Model.BiodataWalisongo;
 import com.destinyapp.biodatawalisongo.Model.DataModel;
+import com.destinyapp.biodatawalisongo.Model.PeninggalanWalisongo;
 import com.destinyapp.biodatawalisongo.R;
 
 import java.util.ArrayList;
 
-public class BiodataActivity extends AppCompatActivity {
+public class PeninggalanActivity extends AppCompatActivity {
     RecyclerView recyclerView;
     private ArrayList<DataModel> pList = new ArrayList<>();
     private RecyclerView.LayoutManager mManager;
@@ -21,12 +22,12 @@ public class BiodataActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_biodata);
+        setContentView(R.layout.activity_peninggalan);
         recyclerView = findViewById(R.id.recycler);
-        pList.addAll(BiodataWalisongo.getListData());
-        mManager = new LinearLayoutManager(BiodataActivity.this,LinearLayoutManager.VERTICAL,false);
+        pList.addAll(PeninggalanWalisongo.getListData());
+        mManager = new LinearLayoutManager(PeninggalanActivity.this,LinearLayoutManager.VERTICAL,false);
         recyclerView.setLayoutManager(mManager);
-        adapter = new AdapterHome(BiodataActivity.this,pList);
+        adapter = new AdapterHome(PeninggalanActivity.this,pList);
         recyclerView.setAdapter(adapter);
         adapter.notifyDataSetChanged();
     }
