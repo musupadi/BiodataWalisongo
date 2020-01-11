@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         peninggalan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this,BiodataActivity.class);
+                Intent intent = new Intent(MainActivity.this,PeninggalanActivity.class);
                 startActivity(intent);
             }
         });
