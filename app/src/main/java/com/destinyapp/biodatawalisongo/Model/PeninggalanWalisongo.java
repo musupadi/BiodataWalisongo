@@ -34,9 +34,9 @@ public class PeninggalanWalisongo {
         ArrayList<DataModel> list = new ArrayList<>();
         for (String[] aData : data) {
             dm = new DataModel();
-            dm.setGambar(aData[0]);
-            dm.setNama_walisongo(aData[1]);
-            dm.setDeskripsi_walisongo(aData[2]);
+            dm.setGambar_peninggalan(aData[0]);
+            dm.setNama_peninggalan(aData[1]);
+            dm.setDeskripsi_peninggalan(aData[2]);
             list.add(dm);
         }
         return list;

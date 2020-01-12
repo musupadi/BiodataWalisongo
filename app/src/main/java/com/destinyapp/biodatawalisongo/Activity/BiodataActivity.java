@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 
-import com.destinyapp.biodatawalisongo.Adapter.AdapterHome;
+import com.destinyapp.biodatawalisongo.Adapter.AdapterWalisongo;
 import com.destinyapp.biodatawalisongo.Model.BiodataWalisongo;
 import com.destinyapp.biodatawalisongo.Model.DataModel;
 import com.destinyapp.biodatawalisongo.R;
@@ -17,7 +17,7 @@ public class BiodataActivity extends AppCompatActivity {
     RecyclerView recyclerView;
     private ArrayList<DataModel> pList = new ArrayList<>();
     private RecyclerView.LayoutManager mManager;
-    AdapterHome adapter;
+    AdapterWalisongo adapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,7 +26,7 @@ public class BiodataActivity extends AppCompatActivity {
         pList.addAll(BiodataWalisongo.getListData());
         mManager = new LinearLayoutManager(BiodataActivity.this,LinearLayoutManager.VERTICAL,false);
         recyclerView.setLayoutManager(mManager);
-        adapter = new AdapterHome(BiodataActivity.this,pList);
+        adapter = new AdapterWalisongo(BiodataActivity.this,pList);
         recyclerView.setAdapter(adapter);
         adapter.notifyDataSetChanged();
     }

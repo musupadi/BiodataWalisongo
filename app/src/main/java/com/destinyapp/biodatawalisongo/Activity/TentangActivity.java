@@ -18,7 +18,7 @@ public class TentangActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tentang);
-        play=(ImageView)findViewById(R.id.ivMusikPlay);
+        play= findViewById(R.id.ivMusikPlay);
 
         SuaraLagu = MediaPlayer.create(TentangActivity.this,R.raw.about);
 

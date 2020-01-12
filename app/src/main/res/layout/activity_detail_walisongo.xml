@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:card_view="http://schemas.android.com/apk/res-auto">
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -17,15 +18,12 @@
             android:layout_marginRight="8dp"
             android:layout_marginBottom="4dp"
             card_view:cardCornerRadius="4dp"
-            android:layout_weight="2">
-
+            android:layout_weight="4">
             <LinearLayout
                 android:padding="5dp"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="horizontal"
-                >
-
+                android:orientation="horizontal">
                 <ImageView
                     android:id="@+id/ivPhoto"
                     android:layout_width="match_parent"
@@ -34,9 +32,7 @@
                     android:scaleType="centerCrop"
                     tools:src="@color/colorAccent"
                     android:layout_weight="1.5"/>
-
-
-                <LinearLayout
+                <RelativeLayout
                     android:paddingLeft="5dp"
                     android:paddingRight="5dp"
                     android:layout_width="match_parent"
@@ -45,22 +41,22 @@
                     android:orientation="vertical">
 
                     <LinearLayout
+                        android:layout_centerInParent="true"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal"
-                        android:gravity="center"
-                        android:layout_gravity="center">
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
                         <TextView
+                            android:gravity="center"
                             android:id="@+id/tvNama"
+                            android:textColor="@color/colorAccent"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:gravity="center"
+                            android:layout_weight="1"
                             tools:text="Ki Hadjar Dewantara"/>
+
                     </LinearLayout>
-                </LinearLayout>
-
+                </RelativeLayout>
             </LinearLayout>
-
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
@@ -85,51 +81,46 @@
                 <ScrollView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
-                    <TextView
-                        android:id="@+id/tvDetail"
-                        android:textSize="25dp"
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        tools:text="Detail"/>
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/tvDetail"
+                            android:textSize="15sp"
+                            android:textColor="@color/colorAccent"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            tools:text="Detail"/>
+                        <TextView
+                            android:textSize="25sp"
+                            android:textColor="@color/colorAccent"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Makam Wali Songo"
+                            android:textStyle="bold"/>
+                        <ImageView
+                            android:id="@+id/ivMakam"
+                            android:layout_width="match_parent"
+                            android:layout_height="300dp"
+                            android:src="@drawable/walisongo"/>
+                        <TextView
+                            android:textSize="25sp"
+                            android:textColor="@color/colorAccent"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Alamat Makam"
+                            android:textStyle="bold"/>
+                        <TextView
+                            android:textColor="@color/colorAccent"
+                            android:textSize="15sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            tools:text="Alamat Makam"
+                            android:id="@+id/tvAlamat"/>
+                    </LinearLayout>
                 </ScrollView>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="4dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginBottom="4dp"
-            card_view:cardCornerRadius="4dp"
-            android:layout_weight="2.5">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:layout_weight="1">
-
-                    <Button
-                        android:id="@+id/btn_set_favorite"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="Favorit"
-                        android:textSize="10sp"
-                        android:textColor="@color/colorWhite"
-                        android:background="@drawable/button_rounded_primary"/>
-
-                </LinearLayout>
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
     </LinearLayout>
-
-
-
 </RelativeLayout>

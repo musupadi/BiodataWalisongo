@@ -6,8 +6,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 
-import com.destinyapp.biodatawalisongo.Adapter.AdapterHome;
-import com.destinyapp.biodatawalisongo.Model.BiodataWalisongo;
+import com.destinyapp.biodatawalisongo.Adapter.AdapterPeninggalan;
+import com.destinyapp.biodatawalisongo.Adapter.AdapterWalisongo;
 import com.destinyapp.biodatawalisongo.Model.DataModel;
 import com.destinyapp.biodatawalisongo.Model.PeninggalanWalisongo;
 import com.destinyapp.biodatawalisongo.R;
@@ -18,7 +18,7 @@ public class PeninggalanActivity extends AppCompatActivity {
     RecyclerView recyclerView;
     private ArrayList<DataModel> pList = new ArrayList<>();
     private RecyclerView.LayoutManager mManager;
-    AdapterHome adapter;
+    AdapterPeninggalan adapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,7 +27,7 @@ public class PeninggalanActivity extends AppCompatActivity {
         pList.addAll(PeninggalanWalisongo.getListData());
         mManager = new LinearLayoutManager(PeninggalanActivity.this,LinearLayoutManager.VERTICAL,false);
         recyclerView.setLayoutManager(mManager);
-        adapter = new AdapterHome(PeninggalanActivity.this,pList);
+        adapter = new AdapterPeninggalan(PeninggalanActivity.this,pList);
         recyclerView.setAdapter(adapter);
         adapter.notifyDataSetChanged();
     }
