@@ -53,6 +53,7 @@ public class AdapterPeninggalan extends RecyclerView.Adapter<AdapterPeninggalan.
                 goInput.putExtra("GAMBAR",dm.getGambar_peninggalan());
                 goInput.putExtra("NAMA",dm.getNama_peninggalan());
                 goInput.putExtra("DESKRIPSI",dm.getDeskripsi_peninggalan());
+                goInput.putExtra( "SUARA",dm.getSuara());
                 ctx.startActivities(new Intent[]{goInput});
             }
         });

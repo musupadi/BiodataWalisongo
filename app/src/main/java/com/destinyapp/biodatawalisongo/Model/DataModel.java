@@ -4,6 +4,7 @@ public class DataModel {
     String gambar,nama_walisongo,deskripsi_walisongo,makam_walisongo,alamat_makam_walisongo;
     String gambar_peninggalan,nama_peninggalan,deskripsi_peninggalan;
     String no,jawaban,a,b,c,d,soal;
+    String suara;
 
     public String getGambar() {
         return gambar;
@@ -123,5 +124,13 @@ public class DataModel {
 
     public void setAlamat_makam_walisongo(String alamat_makam_walisongo) {
         this.alamat_makam_walisongo = alamat_makam_walisongo;
+    }
+
+    public String getSuara() {
+        return suara;
+    }
+
+    public void setSuara(String suara) {
+        this.suara = suara;
     }
 }

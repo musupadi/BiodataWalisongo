@@ -54,6 +54,7 @@ public class AdapterWalisongo extends RecyclerView.Adapter<AdapterWalisongo.Hold
                 goInput.putExtra( "DESKRIPSI",dm.getDeskripsi_walisongo());
                 goInput.putExtra( "MAKAM",dm.getMakam_walisongo());
                 goInput.putExtra( "ALAMAT",dm.getAlamat_makam_walisongo());
+                goInput.putExtra( "SUARA",dm.getSuara());
                 ctx.startActivities(new Intent[]{goInput});
             }
         });

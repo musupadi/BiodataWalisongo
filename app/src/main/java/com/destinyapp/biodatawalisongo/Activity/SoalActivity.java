@@ -3,6 +3,7 @@ package com.destinyapp.biodatawalisongo.Activity;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -21,6 +22,7 @@ public class SoalActivity extends AppCompatActivity {
     Button A,B,C,D;
     TextView Soal,Tittle;
     ImageView gambar;
+    MediaPlayer SuaraLagu;
     private ArrayList<DataModel> pList = new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +44,8 @@ public class SoalActivity extends AppCompatActivity {
         gambar = findViewById(R.id.ivGambar);
         if (Kuis.equals("0")){
             pList.addAll(TebakGambar.getListData());
+            SuaraLagu = MediaPlayer.create(SoalActivity.this,R.raw.siapakahdia);
+            SuaraLagu.start();
         }else{
             pList.addAll(KuisWalisongo.getListData());
         }

@@ -3,6 +3,7 @@ package com.destinyapp.biodatawalisongo.Activity;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -12,6 +13,7 @@ import com.destinyapp.biodatawalisongo.R;
 public class DetailWalisongoActivity extends AppCompatActivity {
     ImageView makam,foto;
     TextView nama,detail,alamat;
+    MediaPlayer SuaraLagu;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,11 +32,19 @@ public class DetailWalisongoActivity extends AppCompatActivity {
         String DESKRIPSI = data.getStringExtra("DESKRIPSI");
         String MAKAM = data.getStringExtra("MAKAM");
         String ALAMAT = data.getStringExtra("ALAMAT");
-
+        String SUARA = data.getStringExtra("SUARA");
+        SuaraLagu = MediaPlayer.create(DetailWalisongoActivity.this,Integer.parseInt(SUARA));
+        SuaraLagu.start();
         makam.setImageResource(Integer.parseInt(MAKAM));
         foto.setImageResource(Integer.parseInt(GAMBAR));
         nama.setText(NAMA);
         detail.setText(DESKRIPSI);
         alamat.setText(ALAMAT);
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        SuaraLagu.stop();
     }
 }
