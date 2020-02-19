@@ -3,7 +3,7 @@ package com.destinyapp.biodatawalisongo.Model;
 public class DataModel {
     String gambar,nama_walisongo,deskripsi_walisongo,makam_walisongo,alamat_makam_walisongo;
     String gambar_peninggalan,nama_peninggalan,deskripsi_peninggalan;
-    String no,jawaban,a,b,c,d,soal;
+    String no,jawaban,a,b,c,d,soal,suaraSoal,suaraSoalA,suaraSoalB,suaraSoalC,suaraSoalD;
     String suara;
 
     public String getGambar() {
@@ -132,5 +132,45 @@ public class DataModel {
 
     public void setSuara(String suara) {
         this.suara = suara;
+    }
+
+    public String getSuaraSoal() {
+        return suaraSoal;
+    }
+
+    public void setSuaraSoal(String suaraSoal) {
+        this.suaraSoal = suaraSoal;
+    }
+
+    public String getSuaraSoalA() {
+        return suaraSoalA;
+    }
+
+    public void setSuaraSoalA(String suaraSoalA) {
+        this.suaraSoalA = suaraSoalA;
+    }
+
+    public String getSuaraSoalB() {
+        return suaraSoalB;
+    }
+
+    public void setSuaraSoalB(String suaraSoalB) {
+        this.suaraSoalB = suaraSoalB;
+    }
+
+    public String getSuaraSoalC() {
+        return suaraSoalC;
+    }
+
+    public void setSuaraSoalC(String suaraSoalC) {
+        this.suaraSoalC = suaraSoalC;
+    }
+
+    public String getSuaraSoalD() {
+        return suaraSoalD;
+    }
+
+    public void setSuaraSoalD(String suaraSoalD) {
+        this.suaraSoalD = suaraSoalD;
     }
 }

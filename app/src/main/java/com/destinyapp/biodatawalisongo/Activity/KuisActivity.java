@@ -12,12 +12,14 @@ import android.widget.TextView;
 
 import com.destinyapp.biodatawalisongo.Model.DataModel;
 import com.destinyapp.biodatawalisongo.Model.KuisWalisongo;
+import com.destinyapp.biodatawalisongo.Model.Method;
 import com.destinyapp.biodatawalisongo.R;
 
 import java.util.ArrayList;
 
 public class KuisActivity extends AppCompatActivity {
     LinearLayout walisongo,kuis;
+    Method method = new Method();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,6 +35,7 @@ public class KuisActivity extends AppCompatActivity {
                 goInput.putExtra("NO","0");
                 goInput.putExtra("SCORE","0");
                 goInput.putExtra("KUIS","0");
+                goInput.putExtra("RAND",String.valueOf(method.BabiGuling(1,4)));
                 KuisActivity.this.startActivities(new Intent[]{goInput});
             }
         });
@@ -43,6 +46,7 @@ public class KuisActivity extends AppCompatActivity {
                 goInput.putExtra("NO","0");
                 goInput.putExtra("SCORE","0");
                 goInput.putExtra("KUIS","1");
+                goInput.putExtra("RAND",String.valueOf(method.BabiGuling(1,4)));
                 KuisActivity.this.startActivities(new Intent[]{goInput});
             }
         });
